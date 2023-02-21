@@ -52,3 +52,22 @@ CloudFrontの代替ドメイン名は同じにする
 WebSocket APIのカスタムドメイン名の設定(AWS公式doc) <br> 
 わかりづらい <br>
 https://docs.aws.amazon.com/ja_jp/apigateway/latest/developerguide/websocket-api-custom-domain-names.html?icmpid=apigateway_console_help
+
+
+### カスタムドメインを使わない場合
+
+カスタムドメインを使わない場合、<br>
+WebSocket API GatewayをオリジンとするBehaviorのPath Patternは、<br>
+WebSocket API Gatewayのステージ名と同じにする必要があります。<br>
+<br>
+例えば今回の場合ステージ名がProdなので、Path Patternの値は「Prod*」にする必要があります。<br>
+<br>
+
+xxxxxxx.cloudfront.net/Prod へのアクセス → <br>
+xxxxxxx.execute-api.ap-northeast-1.amazonaws.com/Prod に転送される<br>
+<br>
+Origin Pathに/hogeを設定していた場合<br>
+xxxxxxx.cloudfront.net/Prod へのアクセス →<br>
+xxxxxxx.execute-api.ap-northeast-1.amazonaws.com/hoge/Prod に転送される<br>
+
+
