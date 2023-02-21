@@ -26,7 +26,19 @@ https://ドメイン/test でアクセスできるようになるのがカスタ
 
 ドメイン名は、cloudfrontのAlternate Domain Nameと同じとする<br>
 <br>
-4.CloudFrontディストリビューションにオリジン apigateway用のオリジンを追加
+4.CloudFrontディストリビューションにオリジン apigateway用のオリジンを追加し、その<br>
+Path Patternを「websocket*」とします<br>
+※上記はビヘイビアのPath Pattern。オリジンパスとは別<br>
+<br>
+「wss://cfront.kazue.xxxxx.xxxx/websocket」とするとWebSocket通信を開始できます。
+
+5.CloudFrontのOrigin Domain NameはAPI Gatewayのオリジナルのドメイン名で設定する
+「xxxxxxx.execute-api.ap-northeast-1.amazonaws.com」
+
+
+
+### cloudfront参考
+https://github.com/endw0901/aws/blob/main/cloudfront.md
 
 ## カスタムドメイン
 AWS API Gatewayのカスタムドメインを実装する方法<br>
