@@ -70,4 +70,19 @@ Origin Pathに/hogeを設定していた場合<br>
 xxxxxxx.cloudfront.net/Prod へのアクセス →<br>
 xxxxxxx.execute-api.ap-northeast-1.amazonaws.com/hoge/Prod に転送される<br>
 
+## サーバーからクライアントにアクセス
+https://dev.classmethod.jp/articles/cloudfront-in-front-on-websocket-api-gateway/ <br>
+
+サーバー側は@connections コマンドを使用して、接続されたクライアントに対して色々な処理ができます。
+カスタムドメインを使わないとこの処理がエラーになる
+<br>
+説明：<br>
+@connectionsコマンドの利用に必要なIAM認証に必要な、<br>
+リクエスト上の署名に使用するAuthorizationヘッダーを<br>
+CloudFrontが転送時に削除するので、<br>
+削除しない設定が必要<br>
+<br>
+その設定 = 
+「Cache Based on Selected Request Headers」設定項目のWhitelistにAuthorizationヘッダーを指定
+
 
