@@ -85,4 +85,13 @@ CloudFrontが転送時に削除するので、<br>
 その設定 = 
 「Cache Based on Selected Request Headers」設定項目のWhitelistにAuthorizationヘッダーを指定
 
+ヘッダーには、Api Gatewayエンドポイント値が必要
+クライアントリクエスト hostヘッダーは、CloudFrontディストリビューションのエンドポイント or 代替ドメインを
+オリジンのドメイン名に書き換える
+が、
+Hostヘッダーを元に作成される署名までは置き換えられない
+
+なので、API Gatewayカスタムドメインと、CloudFrontディストリビューションの代替ドメインを同じ値にすることでこれが解消する
+
+
 
