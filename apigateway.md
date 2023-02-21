@@ -24,6 +24,10 @@ https://dev.classmethod.jp/articles/cloudfront-in-front-on-websocket-api-gateway
 https://xxx.execute-api.リージョン.amazonaws.com/dev/test のようなアクセスが、
 https://ドメイン/test でアクセスできるようになるのがカスタムドメイン ※ステージ名が隠れる
 
+ドメイン名は、cloudfrontのAlternate Domain Nameと同じとする<br>
+<br>
+4.CloudFrontディストリビューションにオリジン apigateway用のオリジンを追加
+
 ## カスタムドメイン
 AWS API Gatewayのカスタムドメインを実装する方法<br>
 
