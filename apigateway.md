@@ -1,5 +1,10 @@
 # ApiGateway
 
+## 参考動画
+AWS API Gateway - WebSocket API + EC2 (HTTP & VPC Link & Auth & API Keys & Lambda Authorizer)
+https://www.youtube.com/watch?v=hm3RV1aJllU
+
+##
 - カスタムドメイン
 - WebSocket URL :  wss://(ApiGatewayのAPI-ID).execute-api.(リージョン).amazonaws.com/(ステージ)/
 - 接続URl        ： https://(ApiGatewayのAPI-ID).execute-api.(リージョン).amazonaws.com/(ステージ)/@connections
